@@ -1,0 +1,8 @@
+{
+  "name": "Alder Meadow",
+  "short_name": "Alder Meadow",
+  "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }],
+  "theme_color": "#ADB39C",
+  "background_color": "#F5F0ED",
+  "display": "standalone"
+}

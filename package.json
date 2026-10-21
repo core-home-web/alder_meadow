@@ -1,0 +1,13 @@
+{
+  "name": "alder-meadow",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Alder Meadow website and brand style guide — static site served by a Cloudflare Worker.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

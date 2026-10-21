@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Alder Meadow</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <style>
+    .nf { min-height: 100vh; display: grid; grid-template-rows: 1fr auto; background: var(--am-white); }
+    .nf__inner { display: grid; place-items: center; align-content: center; gap: var(--space-5); padding: var(--space-8) var(--gutter); text-align: center; }
+    .nf__inner img { width: 150px; }
+    .nf .script { color: var(--am-fernwood); }
+    .nf .meadow { --meadow-h: clamp(120px, 18vw, 220px); }
+    .nf .linen { height: 80px; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <div class="nf__inner">
+      <img src="/assets/img/brand/badge.svg" width="150" height="150" alt="Alder Meadow">
+      <p class="script script--lg">wandered off the path</p>
+      <h1 class="h2">Page not found</h1>
+      <p class="muted">The page you're looking for has gone to seed.</p>
+      <a class="btn" href="/">Back home</a>
+    </div>
+    <div>
+      <div class="meadow" aria-hidden="true"></div>
+      <div class="linen"></div>
+    </div>
+  </main>
+</body>
+</html>

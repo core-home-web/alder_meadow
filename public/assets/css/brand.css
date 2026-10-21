@@ -1,0 +1,606 @@
+/* ==========================================================================
+   Alder Meadow — Base & Components
+   Built on tokens.css. Shared by the website and the style guide.
+   ========================================================================== */
+
+/* ---- Reset --------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol { margin: 0; }
+ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+
+:focus-visible {
+  outline: var(--stroke-bold) solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  background: var(--am-ink);
+  color: var(--am-white);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus { top: var(--space-4); }
+
+/* ---- Typography ----------------------------------------------------------- */
+/* Headings: Forma DJR Micro Medium, uppercase, ink — as on the guide covers. */
+.display,
+.h1, .h2, .h3, .h4,
+h1, h2, h3, h4 {
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+.display { font-size: var(--text-4xl); line-height: 0.98; }
+h1, .h1 { font-size: var(--text-3xl); }
+h2, .h2 { font-size: var(--text-2xl); line-height: var(--leading-snug); }
+h3, .h3 { font-size: var(--text-xl); line-height: var(--leading-snug); }
+h4, .h4 { font-size: var(--text-lg); line-height: var(--leading-snug); letter-spacing: 0.01em; }
+
+/* Light uppercase — product-name voice from packaging ("BAG CLIP SET") */
+.title-light {
+  font-weight: var(--weight-light);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: var(--leading-tight);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-light);
+  max-width: 38em;
+  text-wrap: pretty;
+}
+
+.prose p + p { margin-top: var(--space-4); }
+.prose { max-width: 38em; text-wrap: pretty; }
+
+/* Small uppercase label — "PRIMARY LOGO", "CLEARANCE SPACE" */
+.label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Ruled label — "—— MAGNETIC ——" from the packaging */
+.ruled {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  font-weight: var(--weight-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.ruled::before,
+.ruled::after {
+  content: "";
+  flex: 1 1 2.5em;
+  max-width: 4.5em;
+  height: var(--stroke-hair);
+  background: currentColor;
+}
+.ruled--start { justify-content: flex-start; }
+.ruled--start::before { display: none; }
+
+/* Script accent — Rollerscript Rough. Short phrases only, never body copy. */
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.script--lg { font-size: var(--text-2xl); }
+.script--xl { font-size: var(--text-3xl); }
+
+.muted { color: var(--color-text-muted); }
+
+.link {
+  color: var(--am-ink);
+  text-decoration: underline;
+  text-decoration-thickness: var(--stroke-hair);
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color var(--dur-fast) var(--ease);
+}
+.link:hover { text-decoration-color: var(--am-sage); text-decoration-thickness: 2px; }
+
+/* ---- Layout --------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--narrow { max-width: calc(var(--container-narrow) + var(--gutter) * 2); }
+
+.section { padding-block: var(--section-y); }
+.section--tight { padding-block: calc(var(--section-y) * 0.6); }
+
+.stack > * + * { margin-top: var(--stack, var(--space-4)); }
+
+/* ---- Surfaces ------------------------------------------------------------- */
+/* Linen: the brand ground. Always paired with the base linen tone so text
+   stays legible before the texture loads. */
+.linen {
+  background-color: var(--am-linen);
+  background-image: var(--texture-linen);
+  background-size: 800px auto;
+  background-repeat: repeat;
+}
+.surface-white { background: var(--am-white); }
+.surface-sage { background: var(--am-sage); color: var(--color-on-brand); }
+.surface-ink { background: var(--am-ink); color: var(--am-vanilla); }
+
+/* Wildflower border — the signature brand illustration. It sits on white and
+   a linen field rises over its stems, exactly as on the guide covers. */
+.meadow {
+  position: relative;
+  height: var(--meadow-h, clamp(140px, 22vw, 300px));
+  background-image: var(--art-meadow);
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: auto calc(var(--meadow-h, clamp(140px, 22vw, 300px)) * 2.2);
+  pointer-events: none;
+}
+.meadow--ink {
+  /* Recolor-able version using the art as a mask */
+  background: var(--meadow-color, var(--am-ink));
+  -webkit-mask: var(--art-meadow) center top / auto calc(var(--meadow-h, 200px) * 2.2) repeat-x;
+  mask: var(--art-meadow) center top / auto calc(var(--meadow-h, 200px) * 2.2) repeat-x;
+}
+
+/* ---- Buttons -------------------------------------------------------------- */
+.btn {
+  --btn-bg: var(--am-ink);
+  --btn-fg: var(--am-white);
+  --btn-bd: var(--am-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 48px;
+  padding: 0.8em 1.6em;
+  border: var(--stroke-line) solid var(--btn-bd);
+  border-radius: var(--radius-sm);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+.btn:hover { --btn-bg: #24303a; --btn-bd: #24303a; }
+.btn:active { transform: translateY(1px); }
+
+.btn--sage { --btn-bg: var(--am-sage); --btn-fg: var(--am-ink); --btn-bd: var(--am-sage); }
+.btn--sage:hover { --btn-bg: var(--am-herb-garden); --btn-bd: var(--am-ink); }
+
+.btn--outline { --btn-bg: transparent; --btn-fg: var(--am-ink); --btn-bd: var(--am-ink); }
+.btn--outline:hover { --btn-bg: var(--am-ink); --btn-fg: var(--am-white); }
+
+.btn--ghost-light { --btn-bg: transparent; --btn-fg: var(--am-white); --btn-bd: rgba(255,255,255,.7); }
+.btn--ghost-light:hover { --btn-bg: var(--am-white); --btn-fg: var(--am-ink); --btn-bd: var(--am-white); }
+
+.btn--sm { min-height: 38px; padding: 0.6em 1.1em; font-size: var(--text-xs); }
+
+.btn .arrow { transition: transform var(--dur-fast) var(--ease); }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* ---- Piece-count badge — "15 PIECE SET" ---------------------------------- */
+.count-badge {
+  display: inline-grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 4.25rem;
+  padding: 0.55rem 0.6rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--am-sage);
+  color: var(--am-ink);
+  text-transform: uppercase;
+  line-height: 0.95;
+  text-align: center;
+}
+.count-badge b {
+  font-size: 1.75rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.02em;
+}
+.count-badge span {
+  margin-top: 0.2rem;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Chip ----------------------------------------------------------------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.35em 0.8em;
+  border: var(--stroke-hair) solid var(--color-line-soft);
+  border-radius: var(--radius-full);
+  background: var(--am-white);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.chip__dot {
+  width: 0.7em; height: 0.7em;
+  border-radius: 50%;
+  background: var(--dot, var(--am-sage));
+  box-shadow: inset 0 0 0 1px rgba(50,62,72,.15);
+}
+
+/* ---- Feature icons — "MAGNETIC BACK · MULTI-USE DESIGN" ------------------ */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+.feature {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  max-width: 6.5rem;
+  text-align: center;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.feature svg {
+  width: 2.1rem;
+  height: 2.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---- Tag card — the scalloped packaging card ------------------------------ */
+/* Outer: soft white card with the domed tab from the hang-tag silhouette.
+   Inner: a 1.5px ink outline inset from the edge, as on every package. */
+.tag {
+  --tag-bg: var(--am-white);
+  --tag-inset: 10px;
+  position: relative;
+  margin-top: clamp(1.5rem, 1rem + 1.5vw, 2.25rem); /* room for the tab */
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  background: var(--tag-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-paper);
+  isolation: isolate;
+}
+.tag::before {
+  /* domed hang-tab */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 1px);
+  width: var(--tag-tab-w, 58%);
+  aspect-ratio: 85.3 / 13.6;
+  transform: translateX(-50%);
+  background: var(--tag-bg);
+  -webkit-mask: var(--art-tag-tab) center / 100% 100% no-repeat;
+  mask: var(--art-tag-tab) center / 100% 100% no-repeat;
+}
+.tag::after {
+  /* inset ink outline */
+  content: "";
+  position: absolute;
+  inset: var(--tag-inset);
+  border: var(--stroke-line) solid var(--am-ink);
+  border-radius: var(--radius-md);
+  pointer-events: none;
+  z-index: -1;
+}
+.tag--linen {
+  --tag-bg: var(--am-linen);
+  background-image: var(--texture-linen);
+  background-size: 800px auto;
+}
+.tag--plain::after { display: none; }
+
+/* ---- Product card --------------------------------------------------------- */
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.product:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.product__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  margin: 0 0 var(--space-4);
+}
+.product__media img {
+  position: absolute;
+  inset: 4% 0;
+  width: 100%;
+  height: 92%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgba(50, 62, 72, 0.14));
+}
+.product__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product__kicker { font-size: var(--text-sm); }
+.product__name {
+  margin-top: var(--space-1);
+  font-size: var(--text-xl);
+}
+.product__desc {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+.product .features { margin-top: auto; padding-top: var(--space-5); }
+
+/* ---- Color swatch --------------------------------------------------------- */
+.swatch {
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.3;
+  text-align: center;
+}
+.swatch__chip {
+  aspect-ratio: 5 / 7;
+  background: var(--swatch);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(50, 62, 72, 0.08);
+}
+
+/* ---- Forms ---------------------------------------------------------------- */
+.field { display: grid; gap: var(--space-2); align-content: start; }
+.field__label { font-size: var(--text-xs); font-weight: var(--weight-medium); letter-spacing: var(--tracking-label); text-transform: uppercase; }
+.field__hint { font-size: var(--text-xs); color: var(--color-text-muted); }
+.input,
+.select,
+.textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75em 1em;
+  border: var(--stroke-hair) solid rgba(50, 62, 72, 0.45);
+  border-radius: var(--radius-sm);
+  background: var(--am-white);
+  font-weight: var(--weight-light);
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.textarea { min-height: 7rem; resize: vertical; }
+.input::placeholder, .textarea::placeholder { color: #7a848c; }
+.input:hover, .select:hover, .textarea:hover { border-color: var(--am-ink); }
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--am-ink);
+  box-shadow: 0 0 0 3px rgba(173, 179, 156, 0.55);
+}
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.check input {
+  appearance: none;
+  width: 1.15rem; height: 1.15rem;
+  margin: 0;
+  border: var(--stroke-line) solid var(--am-ink);
+  border-radius: 4px;
+  background: var(--am-white);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.check input::after {
+  content: "";
+  width: 0.55rem; height: 0.55rem;
+  border-radius: 2px;
+  background: var(--am-ink);
+  transform: scale(0);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.check input:checked::after { transform: scale(1); }
+
+/* ---- Site header ---------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.2) blur(10px);
+  border-bottom: var(--stroke-hair) solid transparent;
+  transition: border-color var(--dur) var(--ease);
+}
+.site-header.is-scrolled { border-bottom-color: var(--color-line-soft); }
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  min-height: 76px;
+}
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+.brand-link img { flex: none; width: 52px; height: 52px; }
+.brand-link .brand-link__word { width: 150px; height: auto; }
+
+.nav { display: flex; align-items: center; gap: var(--space-6); }
+.nav__list {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__link {
+  position: relative;
+  padding-block: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: var(--stroke-line);
+  background: var(--am-sage);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+.nav__link:hover::after,
+.nav__link[aria-current="page"]::after { transform: scaleX(1); }
+
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px; height: var(--stroke-line);
+  margin: 5px auto;
+  background: var(--am-ink);
+  transition: transform var(--dur) var(--ease), opacity var(--dur-fast) var(--ease);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 52rem) {
+  .nav-toggle { display: block; }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--gutter) var(--space-6);
+    background: var(--am-white);
+    border-bottom: var(--stroke-hair) solid var(--color-line-soft);
+    box-shadow: var(--shadow-paper);
+  }
+  .nav.is-open { display: flex; }
+  .nav__list { flex-direction: column; gap: 0; }
+  .nav__link { display: block; padding-block: var(--space-3); border-bottom: var(--stroke-hair) solid var(--color-line-soft); }
+  .nav__link::after { display: none; }
+  .brand-link .brand-link__word { width: 120px; }
+}
+
+/* ---- Site footer ---------------------------------------------------------- */
+.site-footer {
+  padding-block: var(--space-8) var(--space-6);
+  background: var(--am-ink);
+  color: var(--am-vanilla);
+}
+.site-footer a { color: var(--am-white); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr));
+  gap: var(--space-7);
+}
+.site-footer__brand img { width: 170px; }
+.site-footer__brand p { margin-top: var(--space-4); max-width: 22em; font-size: var(--text-sm); line-height: var(--leading-normal); }
+.site-footer h2 { font-size: var(--text-xs); letter-spacing: var(--tracking-label); color: var(--am-sage); margin-bottom: var(--space-4); }
+.site-footer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); font-size: var(--text-sm); }
+.site-footer__base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: var(--stroke-hair) solid rgba(240, 231, 219, 0.2);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 44rem) {
+  .site-footer__grid { grid-template-columns: 1fr 1fr; }
+  .site-footer__brand { grid-column: 1 / -1; }
+}
+
+/* ---- Reveal on scroll ---------------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+.no-js .reveal { opacity: 1; transform: none; }

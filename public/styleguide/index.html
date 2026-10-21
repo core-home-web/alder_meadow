@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style Guide — Alder Meadow</title>
+  <meta name="description" content="The Alder Meadow digital style guide: logo, color, typography, design elements, components and tokens — built from the 2026 Branding Guide.">
+  <meta name="theme-color" content="#ADB39C">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/styleguide.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body class="sg">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-magnet" viewBox="0 0 32 32"><path d="M7 5h5v11a4 4 0 0 0 8 0V5h5v11a9 9 0 0 1-18 0Z"/><path d="M7 10h5M20 10h5"/></symbol>
+    <symbol id="i-multi" viewBox="0 0 32 32"><rect x="12" y="12" width="8" height="8" rx="1"/><circle cx="6" cy="6" r="2.5"/><circle cx="26" cy="6" r="2.5"/><circle cx="6" cy="26" r="2.5"/><circle cx="26" cy="26" r="2.5"/><path d="m8 8 4 4M24 8l-4 4M8 24l4-4M24 24l-4-4"/></symbol>
+    <symbol id="i-grip" viewBox="0 0 32 32"><path d="M12 17V6.5a2 2 0 0 1 4 0V15M16 13.5a2 2 0 0 1 4 0V16M20 15a2 2 0 0 1 4 0v5c0 4.4-3.1 8-7.5 8h-.6a7 7 0 0 1-5.6-2.8L6.5 20.6a2 2 0 0 1 3-2.6L12 20.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 32 32"><path d="M16 4 6 8v7c0 6.5 4.3 11 10 13 5.7-2 10-6.5 10-13V8Z"/><path d="m11.5 16 3 3 6-6.5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 32 32"><path d="M7 25C7 13 14 6 26 6c0 12-7 19-19 19Z"/><path d="M7 25 19 13"/></symbol>
+    <symbol id="i-feet" viewBox="0 0 32 32"><rect x="4" y="9" width="24" height="12" rx="3"/><path d="M8 21v3M24 21v3"/></symbol>
+    <symbol id="i-nest" viewBox="0 0 32 32"><path d="M4 8h24l-9 9v8h-6v-8Z"/><path d="M9 12.5h14"/></symbol>
+    <symbol id="i-wood" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="6.5"/><circle cx="16" cy="16" r="2"/></symbol>
+    <symbol id="i-pot" viewBox="0 0 32 32"><path d="M11 5h10M12.5 5c0 3-4.5 5-4.5 11a8 8 0 0 0 16 0c0-6-4.5-8-4.5-11"/><path d="M9 18c4 1.5 10 1.5 14 0"/></symbol>
+    <symbol id="i-sprig" viewBox="0 0 32 32"><path d="M16 29V9"/><path d="M16 20c-4 0-7-3-7-7 4 0 7 3 7 7ZM16 15c4 0 7-3 7-7-4 0-7 3-7 7ZM16 9c-1.7-1.4-1.7-4.6 0-6 1.7 1.4 1.7 4.6 0 6Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 32 32"><path d="M16 26S5 19.5 5 12.2A5.2 5.2 0 0 1 16 9.6a5.2 5.2 0 0 1 11 2.6C27 19.5 16 26 16 26Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 19h14"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container sg-container site-header__inner">
+      <a class="brand-link" href="/" aria-label="Alder Meadow — home">
+        <img src="/assets/img/brand/badge-160.webp" width="52" height="52" alt="">
+        <img class="brand-link__word" src="/assets/img/brand/wordmark.svg" width="150" height="31" alt="">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__link" href="/#story">Our Story</a></li>
+          <li><a class="nav__link" href="/#collection">Collection</a></li>
+          <li><a class="nav__link" href="/#palette">Palette</a></li>
+          <li><a class="nav__link" href="/styleguide/" aria-current="page">Style Guide</a></li>
+        </ul>
+        <a class="btn btn--sm" href="/#collection">Shop the collection</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cover -->
+  <section class="sg-cover" aria-labelledby="sg-title">
+    <div class="container sg-container sg-cover__inner">
+      <img class="sg-cover__badge" src="/assets/img/brand/badge.svg" width="220" height="220" alt="Alder Meadow primary logo">
+      <div class="sg-cover__title">
+        <p class="label">Alder Meadow · Kitchenware tools &amp; gadgets</p>
+        <h1 class="display" id="sg-title">Brand style guide <span class="sg-cover__year">2026</span></h1>
+        <p class="lead">The digital companion to the Alder Meadow Branding Guide. Everything here — color, type, shapes and components — is available as CSS tokens so the website, email and future products stay in step with the packaging.</p>
+      </div>
+    </div>
+    <div class="meadow sg-cover__meadow" aria-hidden="true"></div>
+  </section>
+
+  <div class="linen sg-body">
+    <div class="container sg-container sg-layout">
+      <nav class="sg-toc" aria-label="Style guide sections">
+        <p class="label">Contents</p>
+        <ol role="list">
+          <li><a href="#story"><span>01</span> Brand story</a></li>
+          <li><a href="#logo"><span>02</span> Logo</a></li>
+          <li><a href="#color"><span>03</span> Color</a></li>
+          <li><a href="#type"><span>04</span> Typeface</a></li>
+          <li><a href="#elements"><span>05</span> Design elements</a></li>
+          <li><a href="#components"><span>06</span> Components</a></li>
+          <li><a href="#layout"><span>07</span> Layout &amp; spacing</a></li>
+          <li><a href="#tokens"><span>08</span> Tokens</a></li>
+          <li><a href="#downloads"><span>09</span> Downloads</a></li>
+        </ol>
+      </nav>
+
+      <main id="main" class="sg-main">
+
+        <!-- 01 Brand story -->
+        <section class="sg-section" id="story" aria-labelledby="h-story">
+          <header class="sg-section__head">
+            <span class="sg-num">01</span>
+            <h2 id="h-story">Brand story</h2>
+          </header>
+          <div class="sg-panel sg-panel--white">
+            <p class="sg-story">Alder Meadow is rooted in the beauty of simple living and the quiet comfort of home. Inspired by the organic forms of hand-thrown pottery, the warmth of wooden tools, and the grounding beauty of the natural world, we create kitchen essentials that bring a sense of intention and ease to everyday rituals. With earthy tones, softened colors, and a handmade spirit, Alder Meadow celebrates a slower, more thoughtful way of living where the things we use every day feel as natural, timeless, and comforting as home itself.</p>
+          </div>
+
+          <h3 class="sg-sub label">Voice</h3>
+          <div class="sg-grid sg-grid--4">
+            <div class="sg-card"><h4 class="h4">Warm</h4><p>Speak like a friend in the kitchen — welcoming, never salesy.</p></div>
+            <div class="sg-card"><h4 class="h4">Calm</h4><p>Short, unhurried sentences. Let white space and linen do the work.</p></div>
+            <div class="sg-card"><h4 class="h4">Intentional</h4><p>Talk about rituals and ease, not specs and superlatives.</p></div>
+            <div class="sg-card"><h4 class="h4">Natural</h4><p>Draw on the meadow: wood, clay, wildflowers, linen, home.</p></div>
+          </div>
+
+          <div class="sg-grid sg-grid--2 sg-dodont">
+            <div class="sg-card sg-do">
+              <p class="label"><svg aria-hidden="true"><use href="#i-check"/></svg> Say</p>
+              <p class="sg-quote">“Warm wooden handles for stirring, serving and straining.”</p>
+            </div>
+            <div class="sg-card sg-dont">
+              <p class="label"><svg aria-hidden="true"><use href="#i-x"/></svg> Avoid</p>
+              <p class="sg-quote">“The ULTIMATE must-have utensil set — BUY NOW!”</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 Logo -->
+        <section class="sg-section" id="logo" aria-labelledby="h-logo">
+          <header class="sg-section__head">
+            <span class="sg-num">02</span>
+            <h2 id="h-logo">The logo</h2>
+          </header>
+
+          <div class="sg-grid sg-grid--2">
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--linen">
+                <img src="/assets/img/brand/badge.svg" width="240" height="240" alt="Primary logo: sage circle with hand-drawn anemone and 'alder meadow' script">
+              </div>
+              <figcaption><span class="label">Primary logo</span> The badge. First choice for every application — packaging, favicon, social avatar, site header.</figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--linen sg-stage--stack">
+                <img src="/assets/img/brand/wordmark.svg" width="260" height="54" alt="Wordmark: 'alder meadow' in sage script">
+                <img src="/assets/img/brand/mark.svg" width="170" height="176" alt="Arched wordmark with anemone illustration">
+              </div>
+              <figcaption><span class="label">Wordmark</span> For horizontal spaces and where the badge would repeat. The arched mark is for tags, stamps and embossing.</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sg-sub label">Clearance space</h3>
+          <div class="sg-panel sg-panel--white sg-clearance">
+            <div class="clearance" role="img" aria-label="Clearance diagram: keep one third of the logo height clear on every side">
+              <div class="clearance__zone">
+                <img src="/assets/img/brand/badge.svg" width="180" height="180" alt="">
+              </div>
+              <span class="clearance__tag clearance__tag--top">⅓ H</span>
+              <span class="clearance__tag clearance__tag--right">⅓ H</span>
+              <span class="clearance__tag clearance__tag--h">H</span>
+            </div>
+            <div class="sg-clearance__notes">
+              <p>Keep a clear zone equal to <strong>one third of the logo's height (⅓ H)</strong> on all four sides. No type, edges, images or other marks may enter it.</p>
+              <dl class="sg-specs">
+                <div><dt>Min. size — digital</dt><dd>40 px badge · 120 px wordmark</dd></div>
+                <div><dt>Min. size — print</dt><dd>0.5 in / 12.7 mm badge</dd></div>
+              </dl>
+              <p class="muted sg-small">Minimum sizes are digital-guide recommendations to keep the script legible.</p>
+            </div>
+          </div>
+
+          <h3 class="sg-sub label">Color versions</h3>
+          <div class="sg-grid sg-grid--3">
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--linen sg-stage--sm"><img src="/assets/img/brand/badge.svg" width="130" height="130" alt="Badge on linen"></div>
+              <figcaption><span class="label">On linen</span> Preferred. Sage badge on the linen texture.</figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--white sg-stage--sm"><img src="/assets/img/brand/badge.svg" width="130" height="130" alt="Badge on white"></div>
+              <figcaption><span class="label">On white</span> For digital, receipts and cartons.</figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--ink sg-stage--sm"><img src="/assets/img/brand/mark-white.svg" width="120" height="124" alt="White mark on slate"></div>
+              <figcaption><span class="label">Reversed</span> On 432 C slate, use the white arched mark — never the badge.</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sg-sub label">Misuse</h3>
+          <div class="sg-grid sg-grid--4 sg-misuse">
+            <figure><div class="sg-stage sg-stage--white sg-stage--xs"><img src="/assets/img/brand/badge.svg" width="90" height="90" alt="" style="transform:scaleX(1.45)"></div><figcaption><svg aria-hidden="true"><use href="#i-x"/></svg> Don't stretch or squash</figcaption></figure>
+            <figure><div class="sg-stage sg-stage--white sg-stage--xs"><img src="/assets/img/brand/badge.svg" width="90" height="90" alt="" style="filter:hue-rotate(160deg) saturate(3)"></div><figcaption><svg aria-hidden="true"><use href="#i-x"/></svg> Don't recolor the badge</figcaption></figure>
+            <figure><div class="sg-stage sg-stage--white sg-stage--xs"><img src="/assets/img/brand/badge.svg" width="90" height="90" alt="" style="transform:rotate(-28deg)"></div><figcaption><svg aria-hidden="true"><use href="#i-x"/></svg> Don't rotate</figcaption></figure>
+            <figure><div class="sg-stage sg-stage--white sg-stage--xs"><img src="/assets/img/brand/badge.svg" width="90" height="90" alt="" style="filter:drop-shadow(6px 8px 4px rgba(0,0,0,.55))"></div><figcaption><svg aria-hidden="true"><use href="#i-x"/></svg> No shadows or effects</figcaption></figure>
+          </div>
+        </section>
+
+        <!-- 03 Color -->
+        <section class="sg-section" id="color" aria-labelledby="h-color">
+          <header class="sg-section__head">
+            <span class="sg-num">03</span>
+            <h2 id="h-color">Colors</h2>
+          </header>
+
+          <h3 class="sg-sub label">Primary colors</h3>
+          <div class="sg-grid sg-grid--2">
+            <article class="sg-color" style="--swatch:var(--am-sage)">
+              <div class="sg-color__chip"></div>
+              <div class="sg-color__body">
+                <h4 class="h4">Sage</h4>
+                <dl class="sg-specs">
+                  <div><dt>Pantone</dt><dd>4218 C</dd></div>
+                  <div><dt>HEX</dt><dd><button class="copy" data-copy="#ADB39C" aria-label="Copy #ADB39C">#ADB39C <svg aria-hidden="true"><use href="#i-copy"/></svg></button></dd></div>
+                  <div><dt>RGB</dt><dd>173 179 156</dd></div>
+                  <div><dt>Token</dt><dd><code>--am-sage</code></dd></div>
+                </dl>
+                <p class="sg-small">The logo badge, brand fields and piece-count badges.</p>
+              </div>
+            </article>
+            <article class="sg-color sg-color--dark" style="--swatch:var(--am-ink)">
+              <div class="sg-color__chip"></div>
+              <div class="sg-color__body">
+                <h4 class="h4">Slate</h4>
+                <dl class="sg-specs">
+                  <div><dt>Pantone</dt><dd>432 C</dd></div>
+                  <div><dt>HEX</dt><dd><button class="copy" data-copy="#323E48" aria-label="Copy #323E48">#323E48 <svg aria-hidden="true"><use href="#i-copy"/></svg></button></dd></div>
+                  <div><dt>RGB</dt><dd>50 62 72</dd></div>
+                  <div><dt>Token</dt><dd><code>--am-ink</code></dd></div>
+                </dl>
+                <p class="sg-small">All type, wildflower line art, outlines and primary buttons.</p>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="sg-sub label">Accent colors <span class="sg-season">SS 2027</span></h3>
+          <ul class="sg-accents" role="list">
+            <li style="--swatch:var(--am-vanilla)"><button class="sg-accent" data-copy="#F0E7DB" aria-label="Copy Vanilla #F0E7DB"><span class="sg-accent__chip"></span><span class="sg-accent__pms">9224 C</span><b>Vanilla</b><span>VN · #F0E7DB</span></button></li>
+            <li style="--swatch:var(--am-sepia)"><button class="sg-accent" data-copy="#DBC5B5" aria-label="Copy Sepia #DBC5B5"><span class="sg-accent__chip"></span><span class="sg-accent__pms">482 C</span><b>Sepia</b><span>SEP · #DBC5B5</span></button></li>
+            <li style="--swatch:var(--am-honey)"><button class="sg-accent" data-copy="#E1B77E" aria-label="Copy Honey #E1B77E"><span class="sg-accent__chip"></span><span class="sg-accent__pms">7508 C</span><b>Honey</b><span>HN · #E1B77E</span></button></li>
+            <li style="--swatch:var(--am-rose-whisper)"><button class="sg-accent" data-copy="#E1BDC1" aria-label="Copy Rose Whisper #E1BDC1"><span class="sg-accent__chip"></span><span class="sg-accent__pms">692 C</span><b>Rose Whisper</b><span>RWP · #E1BDC1</span></button></li>
+            <li style="--swatch:var(--am-victorian-heart)"><button class="sg-accent" data-copy="#CB998D" aria-label="Copy Victorian Heart #CB998D"><span class="sg-accent__chip"></span><span class="sg-accent__pms">7612 C</span><b>Victorian Heart</b><span>VTH · #CB998D</span></button></li>
+            <li style="--swatch:var(--am-ashen-rose)"><button class="sg-accent" data-copy="#AF8F94" aria-label="Copy Ashen Rose #AF8F94"><span class="sg-accent__chip"></span><span class="sg-accent__pms">4093 C</span><b>Ashen Rose</b><span>AHR · #AF8F94</span></button></li>
+            <li style="--swatch:var(--am-herb-garden)"><button class="sg-accent" data-copy="#B1B897" aria-label="Copy Herb Garden #B1B897"><span class="sg-accent__chip"></span><span class="sg-accent__pms">5793 C</span><b>Herb Garden</b><span>HBG · #B1B897</span></button></li>
+            <li style="--swatch:var(--am-meadow-moss)"><button class="sg-accent" data-copy="#AAA261" aria-label="Copy Meadow Moss #AAA261"><span class="sg-accent__chip"></span><span class="sg-accent__pms">4237 C</span><b>Meadow Moss</b><span>MEM · #AAA261</span></button></li>
+            <li style="--swatch:var(--am-fernwood)"><button class="sg-accent" data-copy="#777D61" aria-label="Copy Fernwood #777D61"><span class="sg-accent__chip"></span><span class="sg-accent__pms">4221 C</span><b>Fernwood</b><span>FNW · #777D61</span></button></li>
+            <li style="--swatch:var(--am-seaside-mist)"><button class="sg-accent" data-copy="#5F6D81" aria-label="Copy Seaside Mist #5F6D81"><span class="sg-accent__chip"></span><span class="sg-accent__pms">4136 C</span><b>Seaside Mist</b><span>SSM · #5F6D81</span></button></li>
+            <li style="--swatch:var(--am-silvered-bark)"><button class="sg-accent" data-copy="#ABA7A5" aria-label="Copy Silvered Bark #ABA7A5"><span class="sg-accent__chip"></span><span class="sg-accent__pms">2331 C</span><b>Silvered Bark</b><span>SVB · #ABA7A5</span></button></li>
+          </ul>
+          <p class="sg-small muted">Click any swatch to copy its HEX. Screen values are sampled from the branding guide; always proof print work against the Pantone chip.</p>
+
+          <h3 class="sg-sub label">Balance</h3>
+          <div class="sg-balance" role="img" aria-label="Color balance: linen and white 60%, slate 20%, sage 15%, accents 5%">
+            <span class="linen" style="flex:60">Linen &amp; white · 60%</span>
+            <span style="flex:20;background:var(--am-ink);color:var(--am-vanilla)">Slate · 20%</span>
+            <span style="flex:15;background:var(--am-sage)">Sage · 15%</span>
+            <span class="sg-balance__accents" style="flex:5" title="Accents · 5%"><i style="background:var(--am-honey)"></i><i style="background:var(--am-victorian-heart)"></i><i style="background:var(--am-fernwood)"></i><i style="background:var(--am-seaside-mist)"></i></span>
+          </div>
+          <p class="sg-small muted">Grounds stay quiet: linen and white carry most surfaces. Slate is for type and line art, sage for brand moments. Accents tint product color-ways, never large backgrounds behind body copy.</p>
+
+          <h3 class="sg-sub label">Accessible pairings</h3>
+          <div class="sg-table-wrap">
+            <table class="sg-table">
+              <thead>
+                <tr><th scope="col">Sample</th><th scope="col">Text / Background</th><th scope="col">Ratio</th><th scope="col">Use for</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="pair" style="color:var(--am-ink);background:var(--am-white)">Aa</span></td><td>Slate on White</td><td>10.95 : 1</td><td><span class="pass">AAA</span> All text</td></tr>
+                <tr><td><span class="pair linen" style="color:var(--am-ink)">Aa</span></td><td>Slate on Linen</td><td>9.68 : 1</td><td><span class="pass">AAA</span> All text</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-vanilla);background:var(--am-ink)">Aa</span></td><td>Vanilla on Slate</td><td>8.94 : 1</td><td><span class="pass">AAA</span> Footer, reversed panels</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-ink);background:var(--am-honey)">Aa</span></td><td>Slate on Honey</td><td>5.88 : 1</td><td><span class="pass">AA</span> All text</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-ink);background:var(--am-sage)">Aa</span></td><td>Slate on Sage</td><td>5.06 : 1</td><td><span class="pass">AA</span> Badges, sage panels</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-white);background:var(--am-seaside-mist)">Aa</span></td><td>White on Seaside Mist</td><td>5.26 : 1</td><td><span class="pass">AA</span> All text</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-white);background:var(--am-fernwood)">Aa</span></td><td>White on Fernwood</td><td>4.29 : 1</td><td><span class="warn">AA Large</span> 24px+ or 19px medium</td></tr>
+                <tr><td><span class="pair" style="color:var(--am-white);background:var(--am-sage)">Aa</span></td><td>White on Sage</td><td>2.16 : 1</td><td><span class="fail">Decorative</span> Logo art only — never text</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 04 Typeface -->
+        <section class="sg-section" id="type" aria-labelledby="h-type">
+          <header class="sg-section__head">
+            <span class="sg-num">04</span>
+            <h2 id="h-type">Typeface</h2>
+          </header>
+
+          <div class="sg-grid sg-grid--2">
+            <article class="sg-panel sg-panel--white sg-font">
+              <p class="label">Primary</p>
+              <p class="sg-font__name">Forma DJR Micro Light</p>
+              <p class="sg-font__glyphs" style="font-weight:300">ABCDEFG<br>123450</p>
+              <p class="sg-font__set" style="font-weight:300">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+              <hr>
+              <p class="sg-font__name" style="font-weight:500">Forma DJR Micro Medium</p>
+              <p class="sg-font__glyphs" style="font-weight:500">ABCDEFG<br>123450</p>
+              <p class="sg-font__set" style="font-weight:500">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            </article>
+            <article class="sg-panel sg-panel--white sg-font">
+              <p class="label">Secondary</p>
+              <p class="sg-font__name script" style="font-size:1.6rem">rollerscript rough</p>
+              <p class="sg-font__glyphs script">ABCDEFG<br>123450</p>
+              <p class="sg-font__set script" style="font-size:1.5rem">abcdefghijklmnopqrstuvwxyz<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+              <hr>
+              <p class="sg-small"><strong>Use sparingly:</strong> a handwritten aside of two to six words — a sign-off, a seasonal note, a sticker. Never for body copy, buttons or navigation.</p>
+            </article>
+          </div>
+
+          <div class="sg-callout">
+            <p class="label">On the web</p>
+            <p>Forma DJR Micro and Rollerscript Rough are licensed typefaces. The stacks below load them first when a licensed web-font kit (for example Adobe Fonts) is added to the page, and otherwise fall back to the closest open-source matches — <strong>Hanken Grotesk</strong> for Forma and <strong>Caveat</strong> for Rollerscript — which is what this page is currently showing.</p>
+            <pre class="sg-code"><code>--font-sans:   "forma-djr-micro", "Forma DJR Micro", "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+--font-script: "rollerscript-rough", "Rollerscript Rough", "Caveat", cursive;</code></pre>
+          </div>
+
+          <h3 class="sg-sub label">Type scale</h3>
+          <div class="sg-panel sg-panel--white sg-scale">
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Display</b><span>Medium · uppercase · 44–84 · <code>.display</code></span></div><p class="display">Alder meadow</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Heading 1</b><span>Medium · uppercase · 36–60 · <code>h1</code></span></div><p class="h1">Branding guide</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Heading 2</b><span>Medium · uppercase · 28–40 · <code>h2</code></span></div><p class="h2">Brand story</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Heading 3</b><span>Medium · uppercase · 22–28 · <code>h3</code></span></div><p class="h3">Primary colors</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Product name</b><span>Light · uppercase · 22–28 · <code>.title-light</code></span></div><p class="title-light" style="font-size:var(--text-xl)">Bag clip set</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Ruled label</b><span>Light · uppercase · <code>.ruled</code></span></div><p class="ruled ruled-demo">Magnetic</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Label</b><span>Medium · uppercase · 12 · +8% · <code>.label</code></span></div><p class="label">Clearance space</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Lead</b><span>Light · 18–21 · <code>.lead</code></span></div><p class="lead">Kitchen essentials that bring a sense of intention and ease to everyday rituals.</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Body</b><span>Light · 17 · 1.65 · <code>body</code></span></div><p>With earthy tones, softened colors, and a handmade spirit, Alder Meadow celebrates a slower, more thoughtful way of living.</p></div>
+            <div class="sg-scale__row"><div class="sg-scale__meta"><b>Script accent</b><span>Rollerscript · 28–40 · <code>.script</code></span></div><p class="script script--lg">made with care</p></div>
+          </div>
+        </section>
+
+        <!-- 05 Design elements -->
+        <section class="sg-section" id="elements" aria-labelledby="h-elements">
+          <header class="sg-section__head">
+            <span class="sg-num">05</span>
+            <h2 id="h-elements">Design elements</h2>
+          </header>
+
+          <div class="sg-grid sg-grid--2">
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--white sg-stage--meadow"><div class="meadow" style="--meadow-h:200px;width:100%"></div></div>
+              <figcaption><span class="label">Wildflower border</span> Anemone, clover and Queen Anne's lace in slate line art at 75% opacity. Runs edge-to-edge along a white field, with linen rising over the stems. <code>.meadow</code></figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--linen sg-stage--texture"></div>
+              <figcaption><span class="label">Linen texture</span> The brand ground for packaging, panels and cards. Always set over <code>--am-linen</code> so text reads before it loads. <code>.linen</code></figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sg-sub label">Tag silhouettes</h3>
+          <div class="sg-grid sg-grid--3">
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--white sg-stage--sm"><img src="/assets/img/brand/tag-a.svg" width="160" height="146" alt="Hang-tag outline with a soft domed top"></div>
+              <figcaption><span class="label">Header card</span> Domed tab with stepped shoulders — blister cards and hang tags.</figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--white sg-stage--sm"><img src="/assets/img/brand/tag-b.svg" width="150" height="130" alt="Hang-tag outline with a tall scalloped top"></div>
+              <figcaption><span class="label">Scallop card</span> Taller, swept scallop — smaller tags and stickers.</figcaption>
+            </figure>
+            <figure class="sg-figure">
+              <div class="sg-stage sg-stage--white sg-stage--sm">
+                <div class="tag tag--linen sg-mini-tag"><span class="ruled" style="font-size:.7rem">Magnetic</span><span class="title-light">Bag clip set</span></div>
+              </div>
+              <figcaption><span class="label">On screen</span> <code>.tag</code> rebuilds the header card in CSS with the inset 1.5 px slate outline.</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sg-sub label">Feature icons</h3>
+          <div class="sg-panel sg-panel--white">
+            <ul class="features sg-icons" role="list">
+              <li class="feature"><svg aria-hidden="true"><use href="#i-magnet"/></svg>Magnetic back</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-multi"/></svg>Multi-use design</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-grip"/></svg>Comfort grip handle</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-shield"/></svg>Durable design</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-leaf"/></svg>BPA free</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-feet"/></svg>Footed grip</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-wood"/></svg>Natural wood</li>
+              <li class="feature"><svg aria-hidden="true"><use href="#i-nest"/></svg>Nesting sizes</li>
+            </ul>
+            <p class="sg-small muted sg-center">1.5 px slate strokes, round caps, 32 px grid. Labels in Medium uppercase, two lines max.</p>
+          </div>
+
+          <h3 class="sg-sub label">Use of assets</h3>
+          <div class="sg-panel sg-panel--white sg-anatomy">
+            <img src="/assets/img/products/clips.webp" width="376" height="671" alt="Magnetic bag clip set packaging" loading="lazy">
+            <ol class="sg-anatomy__list">
+              <li><b>Badge</b> centered at the top of the card, inside the clearance zone.</li>
+              <li><b>Ruled label</b> in Light uppercase names the material or feature.</li>
+              <li><b>Product name</b> in large Light uppercase — the loudest line on the pack.</li>
+              <li><b>Feature icons</b> in a row of two to three, with short uppercase labels.</li>
+              <li><b>Piece count</b> in a sage badge, top-right.</li>
+              <li><b>Wildflowers</b> frame the lower corners and bleed off the edges, over linen.</li>
+              <li><b>Inset outline</b> in 432 C follows the card silhouette.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- 06 Components -->
+        <section class="sg-section" id="components" aria-labelledby="h-components">
+          <header class="sg-section__head">
+            <span class="sg-num">06</span>
+            <h2 id="h-components">Components</h2>
+          </header>
+
+          <h3 class="sg-sub label">Buttons</h3>
+          <div class="sg-panel sg-panel--white sg-demo">
+            <div class="sg-demo__row">
+              <a class="btn" href="#components">Primary <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn--sage" href="#components">Sage</a>
+              <a class="btn btn--outline" href="#components">Outline</a>
+              <a class="btn btn--sm" href="#components">Small</a>
+              <a class="link" href="#components">Text link</a>
+            </div>
+            <div class="sg-demo__row sg-demo__row--ink">
+              <a class="btn btn--ghost-light" href="#components">Ghost on slate</a>
+              <a class="btn btn--sage" href="#components">Sage on slate</a>
+            </div>
+            <pre class="sg-code"><code>&lt;a class="btn"&gt;…&lt;/a&gt;  .btn--sage  .btn--outline  .btn--ghost-light  .btn--sm</code></pre>
+          </div>
+
+          <div class="sg-grid sg-grid--2">
+            <div>
+              <h3 class="sg-sub label">Piece-count badge</h3>
+              <div class="sg-panel sg-panel--white sg-demo sg-demo--center">
+                <span class="count-badge"><b>15</b><span>Piece set</span></span>
+                <span class="count-badge"><b>6</b><span>Piece set</span></span>
+                <span class="count-badge"><b>3</b><span>Piece set</span></span>
+              </div>
+              <p class="sg-small muted">Packaging sets white type on sage; on screen we use slate on sage for legibility (5.06 : 1).</p>
+            </div>
+            <div>
+              <h3 class="sg-sub label">Chips</h3>
+              <div class="sg-panel sg-panel--white sg-demo sg-demo--center">
+                <span class="chip"><span class="chip__dot" style="--dot:var(--am-victorian-heart)"></span>Victorian Heart</span>
+                <span class="chip"><span class="chip__dot" style="--dot:var(--am-herb-garden)"></span>Herb Garden</span>
+                <span class="chip"><span class="chip__dot" style="--dot:var(--am-seaside-mist)"></span>Seaside Mist</span>
+              </div>
+              <p class="sg-small muted">Color-way selectors and filters.</p>
+            </div>
+          </div>
+
+          <h3 class="sg-sub label">Product card</h3>
+          <div class="sg-grid sg-grid--2 sg-product-demo">
+            <article class="tag tag--linen product">
+              <div class="product__media">
+                <img src="/assets/img/products/clips.webp" width="376" height="671" alt="Magnetic bag clip set" loading="lazy">
+                <span class="count-badge product__badge"><b>15</b><span>Piece set</span></span>
+              </div>
+              <p class="ruled product__kicker">Magnetic</p>
+              <h4 class="title-light product__name">Bag clip set</h4>
+              <p class="product__desc">Clips that hold tight and stay close at hand.</p>
+              <ul class="features" role="list">
+                <li class="feature"><svg aria-hidden="true"><use href="#i-magnet"/></svg>Magnetic back</li>
+                <li class="feature"><svg aria-hidden="true"><use href="#i-multi"/></svg>Multi-use design</li>
+                <li class="feature"><svg aria-hidden="true"><use href="#i-grip"/></svg>Comfort grip handle</li>
+              </ul>
+            </article>
+            <div class="sg-anatomy__notes">
+              <pre class="sg-code"><code>&lt;article class="tag tag--linen product"&gt;
+  &lt;div class="product__media"&gt;
+    &lt;img …&gt;
+    &lt;span class="count-badge product__badge"&gt;
+      &lt;b&gt;15&lt;/b&gt;&lt;span&gt;Piece set&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;p class="ruled product__kicker"&gt;Magnetic&lt;/p&gt;
+  &lt;h3 class="title-light product__name"&gt;Bag clip set&lt;/h3&gt;
+  &lt;p class="product__desc"&gt;…&lt;/p&gt;
+  &lt;ul class="features"&gt;…&lt;/ul&gt;
+&lt;/article&gt;</code></pre>
+              <p class="sg-small muted">Mirrors the packaging hierarchy: ruled kicker → light product name → feature icons. <code>.tag--plain</code> drops the inset outline; <code>.tag--linen</code> adds the texture.</p>
+            </div>
+          </div>
+
+          <h3 class="sg-sub label">Form fields</h3>
+          <div class="sg-panel sg-panel--white">
+            <form class="sg-form" onsubmit="return false" aria-label="Form field examples">
+              <div class="field">
+                <label class="field__label" for="sg-name">Name</label>
+                <input class="input" id="sg-name" type="text" placeholder="Your name" autocomplete="off">
+              </div>
+              <div class="field">
+                <label class="field__label" for="sg-email">Email</label>
+                <input class="input" id="sg-email" type="email" placeholder="you@example.com" autocomplete="off">
+                <span class="field__hint">We'll only write when something new is blooming.</span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="sg-topic">Topic</label>
+                <select class="select" id="sg-topic"><option>Retail</option><option>Wholesale</option><option>Press</option></select>
+              </div>
+              <div class="field sg-form__wide">
+                <label class="field__label" for="sg-msg">Message</label>
+                <textarea class="textarea" id="sg-msg" placeholder="Tell us a little more"></textarea>
+              </div>
+              <label class="check sg-form__wide"><input type="checkbox" checked> Send me seasonal notes</label>
+            </form>
+          </div>
+        </section>
+
+        <!-- 07 Layout -->
+        <section class="sg-section" id="layout" aria-labelledby="h-layout">
+          <header class="sg-section__head">
+            <span class="sg-num">07</span>
+            <h2 id="h-layout">Layout &amp; spacing</h2>
+          </header>
+          <div class="sg-grid sg-grid--2">
+            <div class="sg-panel sg-panel--white">
+              <p class="label">Spacing · 4 px base</p>
+              <ul class="sg-spacing" role="list">
+                <li><code>--space-1</code><i style="width:4px"></i><span>4</span></li>
+                <li><code>--space-2</code><i style="width:8px"></i><span>8</span></li>
+                <li><code>--space-3</code><i style="width:12px"></i><span>12</span></li>
+                <li><code>--space-4</code><i style="width:16px"></i><span>16</span></li>
+                <li><code>--space-5</code><i style="width:24px"></i><span>24</span></li>
+                <li><code>--space-6</code><i style="width:32px"></i><span>32</span></li>
+                <li><code>--space-7</code><i style="width:48px"></i><span>48</span></li>
+                <li><code>--space-8</code><i style="width:64px"></i><span>64</span></li>
+                <li><code>--space-9</code><i style="width:96px"></i><span>96</span></li>
+                <li><code>--space-10</code><i style="width:128px"></i><span>128</span></li>
+              </ul>
+            </div>
+            <div class="sg-panel sg-panel--white">
+              <p class="label">Corners &amp; lines</p>
+              <div class="sg-radii">
+                <div><i style="border-radius:var(--radius-xs)"></i><code>--radius-xs</code> 4</div>
+                <div><i style="border-radius:var(--radius-sm)"></i><code>--radius-sm</code> 8</div>
+                <div><i style="border-radius:var(--radius-md)"></i><code>--radius-md</code> 14</div>
+                <div><i style="border-radius:var(--radius-lg)"></i><code>--radius-lg</code> 22</div>
+              </div>
+              <hr>
+              <p class="label">Elevation</p>
+              <div class="sg-radii">
+                <div><i style="box-shadow:var(--shadow-paper);border:0"></i><code>--shadow-paper</code></div>
+                <div><i style="box-shadow:var(--shadow-lift);border:0"></i><code>--shadow-lift</code></div>
+              </div>
+              <p class="sg-small muted">Paper-soft, never glossy. Corners are gentle like thrown clay — avoid pills except for chips.</p>
+            </div>
+          </div>
+          <div class="sg-panel sg-panel--white">
+            <p class="label">Grid</p>
+            <div class="sg-cols" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="sg-small">Max content width <strong>72rem (1152 px)</strong>; reading measure 46rem. Fluid gutters from 16 px on phones to 40 px on desktop. Sections breathe with 64–128 px of vertical space.</p>
+          </div>
+        </section>
+
+        <!-- 08 Tokens -->
+        <section class="sg-section" id="tokens" aria-labelledby="h-tokens">
+          <header class="sg-section__head">
+            <span class="sg-num">08</span>
+            <h2 id="h-tokens">Tokens</h2>
+          </header>
+          <div class="sg-panel sg-panel--white">
+            <p>Include the token sheet first, then the component layer. Every value on this page comes from these two files.</p>
+            <pre class="sg-code"><code>&lt;link rel="stylesheet" href="/assets/css/tokens.css"&gt;
+&lt;link rel="stylesheet" href="/assets/css/brand.css"&gt;</code></pre>
+            <pre class="sg-code"><code>:root {
+  --am-sage: #adb39c;      /* 4218 C */
+  --am-ink:  #323e48;      /* 432 C  */
+  --am-linen: #f5f0ed;
+
+  --font-sans:   "forma-djr-micro", …, "Hanken Grotesk", sans-serif;
+  --font-script: "rollerscript-rough", …, "Caveat", cursive;
+
+  --radius-lg: 22px;  --stroke-line: 1.5px;
+  --texture-linen: url("/assets/img/textures/linen.jpg");
+  --art-meadow:    url("/assets/img/brand/meadow.webp");
+}</code></pre>
+            <a class="btn btn--outline btn--sm" href="/assets/css/tokens.css" download><svg class="sg-btn-icon" aria-hidden="true"><use href="#i-download"/></svg> tokens.css</a>
+          </div>
+        </section>
+
+        <!-- 09 Downloads -->
+        <section class="sg-section" id="downloads" aria-labelledby="h-downloads">
+          <header class="sg-section__head">
+            <span class="sg-num">09</span>
+            <h2 id="h-downloads">Downloads</h2>
+          </header>
+          <ul class="sg-downloads" role="list">
+            <li><a href="/assets/img/brand/badge.svg" download><span class="sg-dl__thumb sg-stage--linen"><img src="/assets/img/brand/badge.svg" width="56" height="56" alt=""></span><span><b>Primary logo</b><small>SVG · sage badge</small></span></a></li>
+            <li><a href="/assets/img/brand/badge-512.png" download><span class="sg-dl__thumb sg-stage--linen"><img src="/assets/img/brand/badge-160.webp" width="56" height="56" alt=""></span><span><b>Primary logo</b><small>PNG · 512 px</small></span></a></li>
+            <li><a href="/assets/img/brand/wordmark.svg" download><span class="sg-dl__thumb sg-stage--linen"><img src="/assets/img/brand/wordmark.svg" width="70" height="15" alt=""></span><span><b>Wordmark</b><small>SVG · sage</small></span></a></li>
+            <li><a href="/assets/img/brand/wordmark-ink.svg" download><span class="sg-dl__thumb sg-stage--linen"><img src="/assets/img/brand/wordmark-ink.svg" width="70" height="15" alt=""></span><span><b>Wordmark</b><small>SVG · slate</small></span></a></li>
+            <li><a href="/assets/img/brand/wordmark-white.svg" download><span class="sg-dl__thumb sg-stage--ink"><img src="/assets/img/brand/wordmark-white.svg" width="70" height="15" alt=""></span><span><b>Wordmark</b><small>SVG · white</small></span></a></li>
+            <li><a href="/assets/img/brand/mark.svg" download><span class="sg-dl__thumb sg-stage--linen"><img src="/assets/img/brand/mark.svg" width="44" height="46" alt=""></span><span><b>Arched mark</b><small>SVG · sage</small></span></a></li>
+            <li><a href="/assets/img/brand/mark-white.svg" download><span class="sg-dl__thumb sg-stage--ink"><img src="/assets/img/brand/mark-white.svg" width="44" height="46" alt=""></span><span><b>Arched mark</b><small>SVG · white</small></span></a></li>
+            <li><a href="/assets/img/brand/meadow.svg" download><span class="sg-dl__thumb sg-stage--white"><span class="meadow" style="--meadow-h:40px;width:100%"></span></span><span><b>Wildflower border</b><small>SVG · vector</small></span></a></li>
+            <li><a href="/assets/img/textures/linen.jpg" download><span class="sg-dl__thumb linen"></span><span><b>Linen texture</b><small>JPG · seamless tile</small></span></a></li>
+            <li><a href="/assets/img/brand/tag-a.svg" download><span class="sg-dl__thumb sg-stage--white"><img src="/assets/img/brand/tag-a.svg" width="44" height="40" alt=""></span><span><b>Header card</b><small>SVG · outline</small></span></a></li>
+            <li><a href="/assets/img/brand/tag-b.svg" download><span class="sg-dl__thumb sg-stage--white"><img src="/assets/img/brand/tag-b.svg" width="44" height="38" alt=""></span><span><b>Scallop card</b><small>SVG · outline</small></span></a></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container sg-container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="/assets/img/brand/wordmark-white.svg" width="174" height="36" alt="Alder Meadow">
+          <p>Brand style guide 2026 — the digital companion to the Alder Meadow Branding Guide.</p>
+        </div>
+        <div>
+          <h2>Website</h2>
+          <ul role="list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#collection">The collection</a></li>
+            <li><a href="/#palette">SS 2027 palette</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Guide</h2>
+          <ul role="list">
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#color">Color</a></li>
+            <li><a href="#tokens">Tokens</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <span>© 2026 Alder Meadow</span>
+        <span>Branding Guide 2026 · v1.0</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

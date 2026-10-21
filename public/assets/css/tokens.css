@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Alder Meadow — Design Tokens
+   Source of truth: Alder Meadow Branding Guide 2026.
+   Every color, type and shape decision on the site should come from here.
+   ========================================================================== */
+
+:root {
+  /* ---- Primary colors ---------------------------------------------------- */
+  --am-sage: #adb39c;          /* Pantone 4218 C — logo badge, brand fields */
+  --am-ink: #323e48;           /* Pantone 432 C  — type, line art, outlines */
+
+  /* ---- Accent colors · SS 2027 ------------------------------------------ */
+  --am-vanilla: #f0e7db;       /* 9224 C  · VN  */
+  --am-sepia: #dbc5b5;         /* 482 C   · SEP */
+  --am-honey: #e1b77e;         /* 7508 C  · HN  */
+  --am-rose-whisper: #e1bdc1;  /* 692 C   · RWP */
+  --am-victorian-heart: #cb998d; /* 7612 C · VTH */
+  --am-ashen-rose: #af8f94;    /* 4093 C  · AHR */
+  --am-herb-garden: #b1b897;   /* 5793 C  · HBG */
+  --am-meadow-moss: #aaa261;   /* 4237 C  · MEM */
+  --am-fernwood: #777d61;      /* 4221 C  · FNW */
+  --am-seaside-mist: #5f6d81;  /* 4136 C  · SSM */
+  --am-silvered-bark: #aba7a5; /* 2331 C  · SVB */
+
+  /* ---- Neutrals ---------------------------------------------------------- */
+  --am-white: #ffffff;
+  --am-linen: #f5f0ed;         /* average tone of the brand linen texture */
+  --am-linen-deep: #ebe3dc;    /* linen in shadow — borders on linen */
+
+  /* ---- Semantic roles ---------------------------------------------------- */
+  --color-bg: var(--am-white);
+  --color-bg-linen: var(--am-linen);
+  --color-surface: var(--am-white);
+  --color-text: var(--am-ink);
+  --color-text-muted: #5b6670;          /* ink at ~80% on white, 5.9:1 */
+  --color-line: var(--am-ink);
+  --color-line-soft: rgba(50, 62, 72, 0.18);
+  --color-brand: var(--am-sage);
+  --color-on-brand: var(--am-ink);      /* text on sage must be ink (5.06:1) */
+  --color-focus: var(--am-seaside-mist);
+
+  /* ---- Typography -------------------------------------------------------- */
+  /* Brand faces first (load via a licensed Adobe Fonts kit), then the
+     open-source web stand-ins, then system fallbacks. */
+  --font-sans: "forma-djr-micro", "Forma DJR Micro", "Hanken Grotesk",
+    "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-script: "rollerscript-rough", "Rollerscript Rough", "Caveat",
+    "Segoe Print", "Bradley Hand", cursive;
+
+  --weight-light: 300;   /* Forma DJR Micro Light — body, product names */
+  --weight-regular: 400;
+  --weight-medium: 500;  /* Forma DJR Micro Medium — headings, labels */
+  --weight-bold: 600;
+
+  /* Fluid type scale (1.25 ratio, clamps between phone and desktop) */
+  --text-2xs: 0.6875rem;                                  /* 11 */
+  --text-xs: 0.75rem;                                     /* 12 */
+  --text-sm: 0.875rem;                                    /* 14 */
+  --text-base: 1.0625rem;                                 /* 17 */
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem); /* 18–21 */
+  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);     /* 22–28 */
+  --text-2xl: clamp(1.75rem, 1.45rem + 1.4vw, 2.5rem);     /* 28–40 */
+  --text-3xl: clamp(2.25rem, 1.7rem + 2.6vw, 3.75rem);     /* 36–60 */
+  --text-4xl: clamp(2.75rem, 1.9rem + 4vw, 5.25rem);       /* 44–84 */
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-label: 0.08em;   /* small uppercase labels */
+  --tracking-wide: 0.14em;
+
+  /* ---- Spacing (4px base) ----------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --section-y: clamp(4rem, 2.5rem + 6vw, 8rem);
+  --container: 72rem;
+  --container-narrow: 46rem;
+
+  /* ---- Shape ------------------------------------------------------------- */
+  /* Packaging corners are soft but not pill-like. */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;   /* tag cards, inner outlines */
+  --radius-lg: 22px;   /* outer tag cards */
+  --radius-full: 999px;
+
+  --stroke-hair: 1px;
+  --stroke-line: 1.5px; /* packaging outline weight */
+  --stroke-bold: 2px;
+
+  /* ---- Elevation --------------------------------------------------------- */
+  /* Paper-like — barely-there shadows, never glossy. */
+  --shadow-paper: 0 1px 2px rgba(50, 62, 72, 0.06), 0 8px 24px -12px rgba(50, 62, 72, 0.18);
+  --shadow-lift: 0 2px 4px rgba(50, 62, 72, 0.06), 0 18px 40px -18px rgba(50, 62, 72, 0.28);
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur: 280ms;
+
+  /* ---- Textures & art ---------------------------------------------------- */
+  --texture-linen: url("/assets/img/textures/linen.jpg");
+  --art-meadow: url("/assets/img/brand/meadow.webp");
+  --art-tag-tab: url("/assets/img/brand/tag-tab.svg");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+  }
+}
