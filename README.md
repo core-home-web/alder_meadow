@@ -1,42 +1,53 @@
 # Alder Meadow
 
-Website and digital brand style guide for **Alder Meadow — Kitchenware Tools & Gadgets**, built from the *Alder Meadow Branding Guide 2026*.
+Website for **Alder Meadow — Kitchenware Tools & Gadgets**, built from the *Alder Meadow Branding Guide 2026*. It's served by the Cloudflare Worker `alder-meadow`.
 
-- `/` — marketing site: brand story, the collection, SS 2027 palette
-- `/styleguide/` — logo, color, typeface, design elements, components, tokens and downloads
+## Pages
 
-It's a static site served by the Cloudflare Worker `alder-meadow` using [Workers static assets](https://developers.cloudflare.com/workers/static-assets/). It has no build step.
+| Path | Page |
+| --- | --- |
+| `/` | Landing page: the brand story and a day of everyday rituals |
+| `/about/` | Our story, written in the brand voice |
+| `/shop/` | Product listing with category filters (`?category=cook`, `prep`, `pantry`, `table`) |
+| `/shop/<slug>/` | Product detail pages with a **Find in a store near you** call to action |
+| `/stores/` | Store finder (`?q=`, `?product=`, `?near=me`) |
+| `/styleguide/` | **Internal** brand style guide, password-protected |
 
-## Structure
+## How it's built
 
+- `src/data/products.json` holds the product catalog: names, copy, features, specs, care, imagery and related products.
+- `scripts/build.mjs` generates the public pages into `public/` from that data. Run `npm run build` after any change. The generated HTML is committed, and `wrangler deploy` also runs the build first (see `wrangler.jsonc`).
+- `public/assets/data/stores.json` holds store locations. While it's empty, the store finder shows a "coming soon" message. Each store looks like this:
+  ```json
+  { "id": "1", "name": "…", "retailer": "…", "address": "…", "city": "…", "state": "…", "zip": "…",
+    "lat": 0, "lng": 0, "phone": "…", "url": "…", "products": ["magnetic-bag-clip-set"] }
+  ```
+  Use `"products": "all"` for a store that carries the whole collection.
+- **E-commerce later:** set a product's `shopUrl` in `products.json` and its product page shows a **Buy online** button next to Find in a store.
+- `src/worker.js` serves the static files and puts Basic Auth in front of `/styleguide/`.
+
+## Style guide access
+
+The style guide is for internal use only. It's left out of all public navigation, marked `noindex`, disallowed in `robots.txt`, and gated by the Worker. To enable access, set a password on the Worker:
+
+```sh
+npx wrangler secret put STYLEGUIDE_PASSWORD   # username is "alder" (override with STYLEGUIDE_USER)
 ```
-public/
-  index.html               Home
-  styleguide/index.html    Style guide
-  404.html
-  assets/
-    css/tokens.css         Design tokens (colors, type, spacing, shape): the source of truth
-    css/brand.css          Base styles and shared components (buttons, tag cards, badges, forms…)
-    css/site.css           Home-page layout
-    css/styleguide.css     Style-guide layout
-    js/main.js             Nav toggle, scroll reveal, copy-to-clipboard
-    img/brand/             Logo, wordmark, arched mark, wildflower border, tag shapes (vector, from the guide)
-    img/products/          Packaging shots
-    img/textures/linen.jpg Seamless linen tile
-wrangler.jsonc             Worker config (assets-only)
-```
+
+You can also set it in the Cloudflare dashboard under Workers & Pages → alder-meadow → Settings → Variables and Secrets. Until a password is set, `/styleguide/` returns a locked message.
 
 ## Develop
 
 ```sh
 npm install
-npm run dev      # http://localhost:8787
+echo 'STYLEGUIDE_PASSWORD="local"' > .dev.vars
+npm run dev      # builds, then serves at http://localhost:8787
 ```
 
 ## Deploy
 
-A push to `main` triggers Cloudflare Workers Builds, which runs `npx wrangler deploy`. To deploy by hand, run `npm run deploy`.
+A push to `main` triggers Cloudflare Workers Builds, which runs `npx wrangler deploy`.
 
 ## Fonts
 
-The brand typefaces, **Forma DJR Micro** and **Rollerscript Rough**, are licensed. The font stacks in `tokens.css` list them first. If you add a licensed web-font kit (for example Adobe Fonts) to the page `<head>`, they take over automatically. Until then the site uses the open-source stand-ins **Hanken Grotesk** and **Caveat** from Google Fonts.
+The brand typefaces, **Forma DJR Micro** and **Rollerscript Rough**, are licensed. The font stacks in `public/assets/css/tokens.css` list them first, so adding a licensed web-font kit (for example Adobe Fonts) makes them take over automatically. Until then the site uses the open-source stand-ins **Hanken Grotesk** and **Caveat**.

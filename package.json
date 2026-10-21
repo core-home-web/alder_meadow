@@ -2,10 +2,11 @@
   "name": "alder-meadow",
   "private": true,
   "version": "1.0.0",
-  "description": "Alder Meadow website and brand style guide — static site served by a Cloudflare Worker.",
+  "description": "Alder Meadow website and brand style guide \u2014 static site served by a Cloudflare Worker.",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && wrangler dev",
+    "deploy": "node scripts/build.mjs && wrangler deploy"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

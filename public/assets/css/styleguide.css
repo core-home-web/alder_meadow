@@ -419,3 +419,18 @@ code {
 .sg-dl__thumb.sg-stage--linen { background: var(--am-linen) var(--texture-linen) 0 0 / 400px auto; }
 .sg-dl__thumb.linen { background-size: 400px auto; }
 .sg-dl__thumb .meadow { align-self: end; }
+
+/* ---- Internal marker ------------------------------------------------------ */
+.sg-internal {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 0.8em;
+  border: var(--stroke-line) solid var(--am-victorian-heart);
+  border-radius: var(--radius-full);
+  color: #8a5248;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}

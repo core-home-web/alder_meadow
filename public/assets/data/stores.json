@@ -1,0 +1,4 @@
+{
+  "_schema": "Each store: { id, name, retailer, address, city, state, zip, lat, lng, phone, url, products: [product slugs] | \"all\" }",
+  "stores": []
+}

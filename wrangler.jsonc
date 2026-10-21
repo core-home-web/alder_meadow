@@ -1,10 +1,16 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "alder-meadow",
+  "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
+  // Regenerates the public pages from src/data before every deploy.
+  "build": { "command": "node scripts/build.mjs" },
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    // The internal style guide always goes through the Worker for auth.
+    "run_worker_first": ["/styleguide", "/styleguide/*"]
   }
 }

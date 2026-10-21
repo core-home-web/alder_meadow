@@ -1,0 +1,562 @@
+{
+  "categories": [
+    {
+      "id": "cook",
+      "name": "Cook",
+      "blurb": "Tools for the stove and the slow stir."
+    },
+    {
+      "id": "prep",
+      "name": "Prep",
+      "blurb": "Pouring, chopping and getting ready."
+    },
+    {
+      "id": "pantry",
+      "name": "Pantry",
+      "blurb": "Keeping things fresh and in their place."
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "blurb": "For gathering, serving and lingering."
+    }
+  ],
+  "products": [
+    {
+      "slug": "cooking-utensil-set",
+      "name": "Cooking Utensil Set",
+      "kicker": "6 Piece",
+      "pieces": 6,
+      "categories": [
+        "cook"
+      ],
+      "image": {
+        "src": "/assets/img/products/utensils.webp",
+        "width": 603,
+        "height": 1300,
+        "alt": "Six cooking utensils with warm wooden handles and soft gray heads, gathered on a ring with an Alder Meadow tag"
+      },
+      "gallery": [
+        {
+          "src": "/assets/img/products/details/utensils-heads.webp",
+          "width": 1000,
+          "height": 852,
+          "alt": "Close-up of the utensil heads, including a slotted turner and a pasta server"
+        },
+        {
+          "src": "/assets/img/products/details/utensils-label.webp",
+          "width": 720,
+          "height": 620,
+          "alt": "The Alder Meadow hang tag for the 6 piece cooking utensil set"
+        }
+      ],
+      "colorway": {
+        "name": "Natural wood & soft gray",
+        "swatches": [
+          "#C9A06B",
+          "#ABA7A5"
+        ]
+      },
+      "tagline": "Six everyday shapes with warm wooden handles.",
+      "summary": "Everything you reach for between the first sizzle and the last spoonful. Six cooking utensils pair soft, matte gray heads with warm wooden handles — made to stand in a crock beside the stove, not hide in a drawer.",
+      "features": [
+        {
+          "icon": "wood",
+          "label": "Wooden handles"
+        },
+        {
+          "icon": "multi",
+          "label": "Six everyday tools"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Warm in the hand",
+          "text": "Wooden handles bring the feel of a well-loved tool to every stir, flip and serve."
+        },
+        {
+          "title": "A shape for every step",
+          "text": "Slotted and solid shapes plus a pasta server cover sautéing, serving and lifting from the pot."
+        },
+        {
+          "title": "Quiet on the counter",
+          "text": "Soft gray and natural wood sit easily beside stoneware, linen and everything else you love."
+        }
+      ],
+      "details": [
+        "Set of six cooking utensils",
+        "Natural wooden handles",
+        "Soft gray heads in slotted and solid shapes, including a pasta server",
+        "Gathered on a ring for easy gifting and storage"
+      ],
+      "inTheSet": [
+        "6 cooking utensils"
+      ],
+      "specs": [
+        [
+          "Pieces",
+          "6"
+        ],
+        [
+          "Handles",
+          "Wood"
+        ],
+        [
+          "Heads",
+          "Soft gray"
+        ]
+      ],
+      "care": [
+        "Hand wash in warm, soapy water and dry right away.",
+        "Don't soak the wooden handles or leave them in standing water.",
+        "Now and then, rub the handles with a little food-safe oil to keep the wood looking its best."
+      ],
+      "ritual": {
+        "time": "afternoon",
+        "title": "The slow stir",
+        "text": "Somewhere between the first sizzle and the last taste, the kitchen slows to the rhythm of a wooden spoon. Sauce thickens, steam rises, someone wanders in to ask what's for supper. We made these for that part of the day.",
+        "color": "var(--am-honey)",
+        "spot": "anemone"
+      },
+      "pairsWith": [
+        "acacia-wood-cutting-board",
+        "silicone-funnel-set"
+      ],
+      "shopUrl": null
+    },
+    {
+      "slug": "silicone-funnel-set",
+      "name": "Funnel Set",
+      "kicker": "Silicone",
+      "pieces": 3,
+      "categories": [
+        "prep"
+      ],
+      "image": {
+        "src": "/assets/img/products/funnel.webp",
+        "width": 854,
+        "height": 1236,
+        "alt": "Three nesting silicone funnels in softened rose tones on an Alder Meadow card"
+      },
+      "gallery": [
+        {
+          "src": "/assets/img/products/details/funnel-sizes.webp",
+          "width": 958,
+          "height": 600,
+          "alt": "The largest funnel beside the three marked sizes: 1 inch, 0.4 inch and 0.5 inch"
+        },
+        {
+          "src": "/assets/img/products/details/funnel-label.webp",
+          "width": 900,
+          "height": 500,
+          "alt": "The Alder Meadow silicone funnel set packaging with hand-drawn wildflowers"
+        }
+      ],
+      "colorway": {
+        "name": "Rose",
+        "swatches": [
+          "#E1BDC1",
+          "#CB998D",
+          "#AF8F94"
+        ]
+      },
+      "tagline": "Three nesting funnels in a softened rose.",
+      "summary": "Three nesting silicone funnels for decanting oils, filling spice jars and topping up the pantry without a spill. They stack into one, so they tuck away as easily as they pour.",
+      "features": [
+        {
+          "icon": "nest",
+          "label": "Nesting sizes"
+        },
+        {
+          "icon": "drop",
+          "label": "Spill-free pour"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Three sizes, one stack",
+          "text": "From a wide mouth for grains to a slim spout for spices, the set nests together to save space."
+        },
+        {
+          "title": "Soft and flexible",
+          "text": "Silicone feels gentle in the hand and fits easily into jars, bottles and canisters."
+        },
+        {
+          "title": "Color with calm",
+          "text": "Rose tones from our seasonal palette bring a little warmth to the pantry shelf."
+        }
+      ],
+      "details": [
+        "Set of three nesting funnels",
+        "Made from silicone",
+        "Marked sizes: 1″, 0.5″ and 0.4″",
+        "Stack together for compact storage"
+      ],
+      "inTheSet": [
+        "3 silicone funnels"
+      ],
+      "specs": [
+        [
+          "Pieces",
+          "3"
+        ],
+        [
+          "Material",
+          "Silicone"
+        ],
+        [
+          "Marked sizes",
+          "1″ · 0.5″ · 0.4″"
+        ],
+        [
+          "Color",
+          "Rose"
+        ]
+      ],
+      "care": [
+        "Wash in warm, soapy water after each use.",
+        "Rinse right after pouring oils or syrups for the easiest clean-up.",
+        "Dry fully before nesting and storing."
+      ],
+      "ritual": {
+        "time": "morning",
+        "title": "The morning pour",
+        "text": "Coffee beans into the canister, olive oil into the cruet, oats into the jar. Before the house is fully awake, a few small acts of tidying set the tone for the whole day.",
+        "color": "var(--am-rose-whisper)",
+        "spot": "lace"
+      },
+      "pairsWith": [
+        "magnetic-bag-clip-set",
+        "cooking-utensil-set"
+      ],
+      "shopUrl": null
+    },
+    {
+      "slug": "acacia-wood-cutting-board",
+      "name": "Acacia Wood Cutting Board",
+      "kicker": "Footed Grip",
+      "pieces": null,
+      "categories": [
+        "prep",
+        "table"
+      ],
+      "image": {
+        "src": "/assets/img/products/board.webp",
+        "width": 927,
+        "height": 1300,
+        "alt": "Acacia wood cutting board with a handle and juice groove, wrapped with an Alder Meadow band"
+      },
+      "gallery": [
+        {
+          "src": "/assets/img/products/details/board-handle.webp",
+          "width": 930,
+          "height": 460,
+          "alt": "Close-up of the acacia wood grain, juice groove and handle"
+        },
+        {
+          "src": "/assets/img/products/details/board-label.webp",
+          "width": 640,
+          "height": 940,
+          "alt": "The board's Alder Meadow band listing non-slip feet, durable design and BPA free"
+        }
+      ],
+      "colorway": {
+        "name": "Natural acacia",
+        "swatches": [
+          "#B07A45",
+          "#8A5A30"
+        ]
+      },
+      "tagline": "Warm acacia with non-slip feet, from prep to table.",
+      "summary": "Rich, warm acacia with a carved juice groove, a handle for hanging and non-slip feet that hold it steady while you chop. Large enough for a weeknight supper, and beautiful enough to carry straight to the table.",
+      "features": [
+        {
+          "icon": "feet",
+          "label": "Non-slip feet"
+        },
+        {
+          "icon": "shield",
+          "label": "Durable design"
+        },
+        {
+          "icon": "leaf",
+          "label": "BPA free"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Steady underhand",
+          "text": "Non-slip feet keep the board in place on the counter, so every slice feels sure."
+        },
+        {
+          "title": "From prep to table",
+          "text": "Chop herbs at six, serve bread and cheese at seven. The handle makes it easy to carry."
+        },
+        {
+          "title": "Made to last",
+          "text": "A durable acacia board that only grows more beautiful with care and everyday use."
+        }
+      ],
+      "details": [
+        "Acacia wood cutting and serving board",
+        "Non-slip feet for a steady grip on the counter",
+        "Carved juice groove",
+        "Handle with hanging hole",
+        "BPA free"
+      ],
+      "inTheSet": [
+        "1 large acacia wood cutting board"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Large"
+        ],
+        [
+          "Dimensions",
+          "9.5 × 13 in · 24.1 × 33 cm"
+        ],
+        [
+          "Material",
+          "Acacia wood"
+        ],
+        [
+          "Feet",
+          "Non-slip"
+        ]
+      ],
+      "care": [
+        "Hand wash with warm, soapy water. Not for the dishwasher.",
+        "Never let it soak. Dry upright right after washing.",
+        "Condition with food-safe mineral oil or board butter every few weeks."
+      ],
+      "ritual": {
+        "time": "evening",
+        "title": "Gathering at the table",
+        "text": "The board that held the chopped herbs at six holds the bread and cheese by seven. Good tools move with the evening, from the counter to the center of the table.",
+        "color": "var(--am-sepia)",
+        "spot": "anemone-side"
+      },
+      "pairsWith": [
+        "stainless-steel-steak-knives",
+        "cooking-utensil-set"
+      ],
+      "shopUrl": null
+    },
+    {
+      "slug": "magnetic-bag-clip-set",
+      "name": "Bag Clip Set",
+      "kicker": "Magnetic",
+      "pieces": 15,
+      "categories": [
+        "pantry"
+      ],
+      "image": {
+        "src": "/assets/img/products/clips.webp",
+        "width": 728,
+        "height": 1300,
+        "alt": "A mesh bag of fifteen magnetic bag clips in rose, sage and slate tones with an Alder Meadow header card"
+      },
+      "gallery": [
+        {
+          "src": "/assets/img/products/details/clips-bag.webp",
+          "width": 713,
+          "height": 799,
+          "alt": "Close-up of the bag clips in mixed rose, sage and slate colors"
+        },
+        {
+          "src": "/assets/img/products/details/clips-header.webp",
+          "width": 687,
+          "height": 586,
+          "alt": "The header card showing magnetic back, multi-use design and comfort grip handle"
+        }
+      ],
+      "colorway": {
+        "name": "Mixed meadow tones",
+        "swatches": [
+          "#E1BDC1",
+          "#AF8F94",
+          "#B1B897",
+          "#5F6D81"
+        ]
+      },
+      "tagline": "Fifteen clips that keep the pantry fresh and close at hand.",
+      "summary": "Fifteen clips that keep chips crisp, coffee fresh and the pantry in order. A magnetic back means they wait on the fridge door until you need them, and a comfortable grip makes them easy to pinch open.",
+      "features": [
+        {
+          "icon": "magnet",
+          "label": "Magnetic back"
+        },
+        {
+          "icon": "multi",
+          "label": "Multi-use design"
+        },
+        {
+          "icon": "grip",
+          "label": "Comfort grip handle"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Always within reach",
+          "text": "The magnetic back keeps clips on the fridge door, so there's always one when you need it."
+        },
+        {
+          "title": "Clip almost anything",
+          "text": "Snacks, coffee, frozen veg, recipe cards, the kids' drawings — a multi-use design for the whole kitchen."
+        },
+        {
+          "title": "Easy on the hands",
+          "text": "A comfort grip handle makes them simple to pinch open, again and again."
+        }
+      ],
+      "details": [
+        "Set of fifteen bag clips",
+        "Magnetic back for fridges and other metal surfaces",
+        "Multi-use design",
+        "Comfort grip handle",
+        "Mixed colors from our seasonal palette"
+      ],
+      "inTheSet": [
+        "15 magnetic bag clips"
+      ],
+      "specs": [
+        [
+          "Pieces",
+          "15"
+        ],
+        [
+          "Back",
+          "Magnetic"
+        ],
+        [
+          "Handle",
+          "Comfort grip"
+        ],
+        [
+          "Colors",
+          "Mixed"
+        ]
+      ],
+      "care": [
+        "Wipe clean with a damp cloth and dry.",
+        "Keep magnets away from bank cards, phones and other electronics."
+      ],
+      "ritual": {
+        "time": "midday",
+        "title": "The pantry, kept",
+        "text": "An open bag of coffee, the last of the good crackers, flour for Sunday's bread. Keeping things fresh is its own quiet kind of care, and it's easier when the clip is right there on the fridge.",
+        "color": "var(--am-herb-garden)",
+        "spot": "clover"
+      },
+      "pairsWith": [
+        "silicone-funnel-set",
+        "cooking-utensil-set"
+      ],
+      "shopUrl": null
+    },
+    {
+      "slug": "stainless-steel-steak-knives",
+      "name": "Stainless Steel Steak Knives",
+      "kicker": "6 Piece",
+      "pieces": 6,
+      "categories": [
+        "table"
+      ],
+      "image": {
+        "src": "/assets/img/products/knives.webp",
+        "width": 961,
+        "height": 1300,
+        "alt": "Six serrated stainless steel steak knives with cream handles on an Alder Meadow card"
+      },
+      "gallery": [
+        {
+          "src": "/assets/img/products/details/knives-handles.webp",
+          "width": 970,
+          "height": 792,
+          "alt": "Close-up of the cream knife handles with three rivets each"
+        },
+        {
+          "src": "/assets/img/products/details/knives-label.webp",
+          "width": 1000,
+          "height": 292,
+          "alt": "The Alder Meadow knife card marked durable design and BPA free"
+        }
+      ],
+      "colorway": {
+        "name": "Cream & stainless",
+        "swatches": [
+          "#F0E7DB",
+          "#C9CCCF"
+        ]
+      },
+      "tagline": "A classic set of six, made for suppers worth lingering over.",
+      "summary": "Six serrated stainless steel steak knives with creamy, riveted handles — a classic set for Sunday roasts, summer grilling and every supper worth lingering over.",
+      "features": [
+        {
+          "icon": "shield",
+          "label": "Durable design"
+        },
+        {
+          "icon": "leaf",
+          "label": "BPA free"
+        }
+      ],
+      "highlights": [
+        {
+          "title": "Serrated for ease",
+          "text": "Serrated stainless steel blades glide through roasts, chops and crusty bread."
+        },
+        {
+          "title": "Classic cream handles",
+          "text": "Riveted handles in a soft cream that feels at home on any table setting."
+        },
+        {
+          "title": "Set for six",
+          "text": "Enough for the whole table, with a durable design made for years of suppers."
+        }
+      ],
+      "details": [
+        "Set of six steak knives",
+        "Serrated stainless steel blades",
+        "Cream handles with rivets",
+        "Durable design",
+        "BPA free"
+      ],
+      "inTheSet": [
+        "6 steak knives"
+      ],
+      "specs": [
+        [
+          "Pieces",
+          "6"
+        ],
+        [
+          "Blades",
+          "Stainless steel, serrated"
+        ],
+        [
+          "Handles",
+          "Cream, riveted"
+        ]
+      ],
+      "care": [
+        "Hand wash and dry right away to keep the blades looking their best.",
+        "Store in a knife block or drawer insert to protect the edges.",
+        "Always handle blades with care and keep them out of reach of children."
+      ],
+      "ritual": {
+        "time": "evening",
+        "title": "Supper, slowly",
+        "text": "Candles lit, plates passed, conversation running long. The table is where the day comes to rest, and the right knife makes the meal feel like an occasion.",
+        "color": "var(--am-ashen-rose)",
+        "spot": "anemone"
+      },
+      "pairsWith": [
+        "acacia-wood-cutting-board",
+        "magnetic-bag-clip-set"
+      ],
+      "shopUrl": null
+    }
+  ]
+}

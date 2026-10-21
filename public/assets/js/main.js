@@ -58,6 +58,70 @@
     });
   });
 
+  // Product page gallery
+  document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+    const main = gallery.querySelector("[data-gallery-main]");
+    const thumbs = gallery.querySelectorAll(".pdp__thumb");
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        main.src = thumb.dataset.src;
+        main.width = Number(thumb.dataset.width);
+        main.height = Number(thumb.dataset.height);
+        main.alt = thumb.dataset.alt;
+        thumbs.forEach((t) => t.setAttribute("aria-pressed", String(t === thumb)));
+      });
+    });
+  });
+
+  // Find-in-store dialog (product pages)
+  const dialog = document.getElementById("store-finder");
+  if (dialog && typeof dialog.showModal === "function") {
+    document.querySelectorAll("[data-open-store-finder]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        dialog.showModal();
+        dialog.querySelector("input[name='q']")?.focus();
+      });
+    });
+    dialog.querySelectorAll("[data-close-dialog]").forEach((btn) => btn.addEventListener("click", () => dialog.close()));
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  } else {
+    // No <dialog> support: send shoppers straight to the store finder
+    document.querySelectorAll("[data-open-store-finder]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const slug = document.querySelector("#store-finder input[name='product']")?.value || "";
+        window.location.href = `/stores/${slug ? `?product=${encodeURIComponent(slug)}` : ""}`;
+      });
+    });
+  }
+
+  // Shop filters
+  const grid = document.querySelector(".shop__grid");
+  if (grid) {
+    const buttons = document.querySelectorAll("[data-filter]");
+    const items = grid.querySelectorAll("li[data-categories]");
+    const count = document.querySelector("[data-count]");
+    const empty = document.querySelector(".shop__empty");
+    const apply = (filter, push) => {
+      let shown = 0;
+      items.forEach((li) => {
+        const match = filter === "all" || li.dataset.categories.split(" ").includes(filter);
+        li.hidden = !match;
+        if (match) shown++;
+      });
+      document.querySelectorAll(".filter").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
+      if (count) count.textContent = shown;
+      if (empty) empty.hidden = shown > 0;
+      if (push) {
+        const u = new URL(window.location.href);
+        if (filter === "all") u.searchParams.delete("category"); else u.searchParams.set("category", filter);
+        history.replaceState(null, "", u);
+      }
+    };
+    buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter, true)));
+    const initial = new URLSearchParams(window.location.search).get("category");
+    if (initial && document.querySelector(`.filter[data-filter="${CSS.escape(initial)}"]`)) apply(initial, false);
+  }
+
   // Style guide: highlight the section in view in the side navigation
   const tocLinks = document.querySelectorAll(".sg-toc a[href^='#']");
   if ("IntersectionObserver" in window && tocLinks.length) {
