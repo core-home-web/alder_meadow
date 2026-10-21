@@ -51,11 +51,7 @@
         }
       ],
       "colorway": {
-        "name": "Natural wood & soft gray",
-        "swatches": [
-          "#C9A06B",
-          "#ABA7A5"
-        ]
+        "name": "Natural wood & soft gray"
       },
       "tagline": "Six everyday shapes with warm wooden handles.",
       "summary": "Everything you reach for between the first sizzle and the last spoonful. Six cooking utensils pair soft, matte gray heads with warm wooden handles — made to stand in a crock beside the stove, not hide in a drawer.",
@@ -79,8 +75,8 @@
           "text": "Slotted and solid shapes plus a pasta server cover sautéing, serving and lifting from the pot."
         },
         {
-          "title": "Quiet on the counter",
-          "text": "Soft gray and natural wood sit easily beside stoneware, linen and everything else you love."
+          "title": "Lovely enough to leave out",
+          "text": "They look right at home in a crock by the stove, so the tools you reach for are always within reach."
         }
       ],
       "details": [
@@ -136,7 +132,7 @@
         "src": "/assets/img/products/funnel.webp",
         "width": 854,
         "height": 1236,
-        "alt": "Three nesting silicone funnels in softened rose tones on an Alder Meadow card"
+        "alt": "Three nesting rose-colored silicone funnels on an Alder Meadow card"
       },
       "gallery": [
         {
@@ -153,14 +149,9 @@
         }
       ],
       "colorway": {
-        "name": "Rose",
-        "swatches": [
-          "#E1BDC1",
-          "#CB998D",
-          "#AF8F94"
-        ]
+        "name": "Rose"
       },
-      "tagline": "Three nesting funnels in a softened rose.",
+      "tagline": "Three nesting funnels for an easy, unhurried pour.",
       "summary": "Three nesting silicone funnels for decanting oils, filling spice jars and topping up the pantry without a spill. They stack into one, so they tuck away as easily as they pour.",
       "features": [
         {
@@ -182,8 +173,8 @@
           "text": "Silicone feels gentle in the hand and fits easily into jars, bottles and canisters."
         },
         {
-          "title": "Color with calm",
-          "text": "Rose tones from our seasonal palette bring a little warmth to the pantry shelf."
+          "title": "Calm, even on busy mornings",
+          "text": "No drips down the jar and no spills on the counter, just an easy pour that keeps the morning unhurried."
         }
       ],
       "details": [
@@ -261,11 +252,7 @@
         }
       ],
       "colorway": {
-        "name": "Natural acacia",
-        "swatches": [
-          "#B07A45",
-          "#8A5A30"
-        ]
+        "name": "Natural acacia"
       },
       "tagline": "Warm acacia with non-slip feet, from prep to table.",
       "summary": "Rich, warm acacia with a carved juice groove, a handle for hanging and non-slip feet that hold it steady while you chop. Large enough for a weeknight supper, and beautiful enough to carry straight to the table.",
@@ -372,13 +359,7 @@
         }
       ],
       "colorway": {
-        "name": "Mixed meadow tones",
-        "swatches": [
-          "#E1BDC1",
-          "#AF8F94",
-          "#B1B897",
-          "#5F6D81"
-        ]
+        "name": "Assorted colors"
       },
       "tagline": "Fifteen clips that keep the pantry fresh and close at hand.",
       "summary": "Fifteen clips that keep chips crisp, coffee fresh and the pantry in order. A magnetic back means they wait on the fridge door until you need them, and a comfortable grip makes them easy to pinch open.",
@@ -415,7 +396,7 @@
         "Magnetic back for fridges and other metal surfaces",
         "Multi-use design",
         "Comfort grip handle",
-        "Mixed colors from our seasonal palette"
+        "Assorted colors"
       ],
       "inTheSet": [
         "15 magnetic bag clips"
@@ -435,7 +416,7 @@
         ],
         [
           "Colors",
-          "Mixed"
+          "Assorted"
         ]
       ],
       "care": [
@@ -484,11 +465,7 @@
         }
       ],
       "colorway": {
-        "name": "Cream & stainless",
-        "swatches": [
-          "#F0E7DB",
-          "#C9CCCF"
-        ]
+        "name": "Cream & stainless"
       },
       "tagline": "A classic set of six, made for suppers worth lingering over.",
       "summary": "Six serrated stainless steel steak knives with creamy, riveted handles — a classic set for Sunday roasts, summer grilling and every supper worth lingering over.",

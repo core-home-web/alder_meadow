@@ -257,7 +257,7 @@ function home() {
           <h2 id="intro-title" class="intro__statement">The most meaningful moments happen in the most ordinary places.</h2>
           <div class="prose">
             <p>At the stove on a slow afternoon. By the window with the first cup of coffee. Around the table long after the plates are cleared. Alder Meadow is rooted in the beauty of simple living and the quiet comfort of home.</p>
-            <p>We make kitchen essentials that bring a sense of intention and ease to everyday rituals: earthy tones, softened colors and a handmade spirit, made to feel as natural and timeless as home itself.</p>
+            <p>We make kitchen essentials that bring a sense of intention and ease to everyday rituals, so cooking feels less like a chore and more like a moment that's yours. Tools that feel as natural, timeless and comforting as home itself.</p>
           </div>
           <a class="link intro__link" href="/about/">Read our story ${icon("arrow", "icon--sm")}</a>
         </div>
@@ -329,7 +329,7 @@ function home() {
           <li class="pillar-card reveal">
             <img src="/assets/img/spots/clover.webp" width="282" height="352" alt="" loading="lazy">
             <h3 class="h4">Warmed by natural materials</h3>
-            <p>Acacia, wood handles and earthy, softened colors that sit quietly beside the things you already love.</p>
+            <p>Wood that feels warm in your hand and familiar from the very first stir, the kind of comfort you come back to every day.</p>
           </li>
           <li class="pillar-card reveal">
             <img src="/assets/img/spots/lace.webp" width="505" height="508" alt="" loading="lazy">
@@ -340,29 +340,6 @@ function home() {
       </div>
     </section>
 
-    <!-- Palette -->
-    <section class="palette linen" id="palette" aria-labelledby="palette-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="ruled label">This season · SS 2027</p>
-          <h2 id="palette-title">Colors of the meadow</h2>
-          <p class="lead">Earthy tones and softened colors gathered from alder catkins, clover, wild rose and silvered bark.</p>
-        </header>
-        <ul class="palette__row reveal" role="list">
-          <li style="--c:var(--am-vanilla)"><span>Vanilla</span></li>
-          <li style="--c:var(--am-sepia)"><span>Sepia</span></li>
-          <li style="--c:var(--am-honey)"><span>Honey</span></li>
-          <li style="--c:var(--am-rose-whisper)"><span>Rose Whisper</span></li>
-          <li style="--c:var(--am-victorian-heart)"><span>Victorian Heart</span></li>
-          <li style="--c:var(--am-ashen-rose)"><span>Ashen Rose</span></li>
-          <li style="--c:var(--am-herb-garden)"><span>Herb Garden</span></li>
-          <li style="--c:var(--am-meadow-moss)"><span>Meadow Moss</span></li>
-          <li style="--c:var(--am-fernwood)" class="is-dark"><span>Fernwood</span></li>
-          <li style="--c:var(--am-seaside-mist)" class="is-dark"><span>Seaside Mist</span></li>
-          <li style="--c:var(--am-silvered-bark)"><span>Silvered Bark</span></li>
-        </ul>
-      </div>
-    </section>
 
     ${storeBand()}`;
 
@@ -395,7 +372,7 @@ function about() {
         <p class="about-open__lead reveal">Alder Meadow is rooted in the beauty of simple living and the quiet comfort of home.</p>
         <div class="prose about-open__prose reveal">
           <p>We believe a kitchen is more than the room where meals get made. It's where mornings begin and evenings wind down, where recipes are passed along and conversations run long. The tools in it should feel like they belong there.</p>
-          <p>So we design kitchen essentials that bring a sense of intention and ease to everyday rituals. Pieces with earthy tones and softened colors, warm materials and a handmade spirit. Pieces you'll want to leave out on the counter.</p>
+          <p>So we design kitchen essentials that bring a sense of intention and ease to everyday rituals. Pieces that feel calm to use, comforting to hold and good to come home to. Pieces you'll want to leave out on the counter.</p>
         </div>
       </div>
     </section>
@@ -436,7 +413,7 @@ function about() {
           <li class="inspire__item reveal">
             ${icon("sprig", "inspire__icon")}
             <h3 class="h4">The natural world</h3>
-            <p>Anemone, clover and Queen Anne's lace. The grounding beauty of a meadow informs our colors, our illustrations and the pace we hope you'll keep.</p>
+            <p>Anemone, clover and Queen Anne's lace. The grounding beauty of a meadow is in everything we make, along with the unhurried pace we hope you'll keep.</p>
           </li>
         </ul>
       </div>
@@ -452,29 +429,27 @@ function about() {
         <ol class="values__list reveal" role="list">
           <li><span class="values__num" aria-hidden="true">01</span><h3 class="h4">Intention over excess</h3><p>Every piece earns its place by bringing ease to a daily ritual. Fewer, better things.</p></li>
           <li><span class="values__num" aria-hidden="true">02</span><h3 class="h4">Ease in the everyday</h3><p>Comfortable grips, steady feet, sizes that nest. Small details that make the work feel lighter.</p></li>
-          <li><span class="values__num" aria-hidden="true">03</span><h3 class="h4">Warmth you can feel</h3><p>Earthy tones, softened colors and natural materials that make a kitchen feel lived in and loved.</p></li>
+          <li><span class="values__num" aria-hidden="true">03</span><h3 class="h4">Warmth you can feel</h3><p>Natural materials and gentle, handmade details that make a kitchen feel lived in and loved.</p></li>
           <li><span class="values__num" aria-hidden="true">04</span><h3 class="h4">Made to stay</h3><p>Timeless rather than trendy: designs that feel as right in ten years as they do today.</p></li>
         </ol>
       </div>
     </section>
 
-    <section class="about-palette linen" aria-labelledby="look-title">
-      <div class="container about-palette__grid">
+    <section class="about-feel linen" aria-labelledby="feel-title">
+      <div class="container about-feel__grid">
         <div class="reveal">
           <p class="ruled ruled--start label">How it feels</p>
-          <h2 id="look-title">Earthy tones, softened colors, a handmade spirit</h2>
+          <h2 id="feel-title">Like coming home</h2>
           <div class="prose">
-            <p>Sage and slate ground everything we make. Around them, a seasonal palette borrowed from the meadow: honey and sepia, rose whisper and fernwood, the silvered bark of the alder itself.</p>
-            <p>Each package is wrapped in a woven linen texture and framed with wildflowers drawn by hand, so it feels like a gift even when it's for you.</p>
+            <p>We hope an Alder Meadow kitchen feels like exhaling at the end of a long day. Like the first warm sip of coffee before anyone else is awake. Like setting the table for the people you love.</p>
+            <p>Every piece arrives wrapped in linen and hand-drawn wildflowers, so even a little something for yourself feels like a gift.</p>
           </div>
         </div>
-        <ul class="about-swatches reveal" role="list" aria-label="Alder Meadow colors">
-          <li style="--c:var(--am-sage)"><span>Sage</span></li>
-          <li style="--c:var(--am-ink)" class="is-dark"><span>Slate</span></li>
-          <li style="--c:var(--am-honey)"><span>Honey</span></li>
-          <li style="--c:var(--am-rose-whisper)"><span>Rose Whisper</span></li>
-          <li style="--c:var(--am-fernwood)" class="is-dark"><span>Fernwood</span></li>
-          <li style="--c:var(--am-silvered-bark)"><span>Silvered Bark</span></li>
+        <ul class="feelings reveal" role="list">
+          <li><span class="script">calm</span><p>The rush slows down. A quiet pour, an easy stir, a moment that's all yours.</p></li>
+          <li><span class="script">comfort</span><p>Tools that feel familiar the very first time you pick them up.</p></li>
+          <li><span class="script">delight</span><p>Small things that make you smile, like a clip right where you left it or a board that stays put.</p></li>
+          <li><span class="script">belonging</span><p>The feeling that everything has its place in your kitchen, and so do you.</p></li>
         </ul>
       </div>
     </section>
@@ -598,7 +573,7 @@ function pdp(p) {
         <dl class="pdp__meta">
           <div>
             <dt>Color</dt>
-            <dd><span class="pdp__swatches" aria-hidden="true">${p.colorway.swatches.map((c) => `<i style="background:${c}"></i>`).join("")}</span>${esc(p.colorway.name)}</dd>
+            <dd>${esc(p.colorway.name)}</dd>
           </div>
           ${p.pieces ? `<div><dt>Set</dt><dd>${p.pieces} pieces</dd></div>` : ""}
         </dl>
